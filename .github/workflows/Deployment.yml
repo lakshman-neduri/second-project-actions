@@ -24,7 +24,7 @@ jobs:
         run: npm test
       - name: Publish File name
         id: publish
-        run: find src/assests/images/*.png -type f -execdir echo 'something={}' >> $GITHUB_OUTPUT ';'
+        run: find src/assets/images/*.png -type f -execdir echo 'something={}' >> $GITHUB_OUTPUT ';'
   deploy:
     needs: test
     runs-on: ubuntu-latest
